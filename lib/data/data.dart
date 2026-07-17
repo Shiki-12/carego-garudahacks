@@ -1,44 +1,59 @@
 import 'package:doctor_app/model.dart/category.dart';
+import 'package:doctor_app/model.dart/partner.dart';
 import 'package:flutter/material.dart';
-import 'package:doctor_app/model.dart/doctor.dart';
 
 class Data {
   static final categoriesList = [
     Category(
       title: "Caregiver",
-      doctorsNumber: 0,
+      subtitle: "Layanan perawat",
       icon: Icons.favorite,
     ),
     Category(
-      title: "Medical Rental",
-      doctorsNumber: 0,
+      title: "Sewa Alkes",
+      subtitle: "Sewa alat kesehatan",
       icon: Icons.local_hospital,
     ),
     Category(
       title: "Ambulans",
-      doctorsNumber: 0,
+      subtitle: "Layanan ambulans",
       icon: Icons.airport_shuttle,
     ),
   ];
 
-  static final doctorsList = [
-    Doctor(
-        name: "Dr.Hegazy Ali",
-        speciality: "Cardiology",
-        image: "assets/images/doctor_1.png",
-        reviews: 80,
-        reviewScore: 4),
-    Doctor(
-        name: "Dr.Dani",
-        speciality: "Dermatology",
-        image: "assets/images/doctor_2.png",
-        reviews: 67,
-        reviewScore: 5),
-    Doctor(
-        name: "Dr George",
-        speciality: "Ophthalmology",
-        image: "assets/images/doctor_3.png",
-        reviews: 19,
-        reviewScore: 3),
+  static final partnersList = [
+    Partner(
+      name: "Rental Medika Mandiri",
+      partnerType: "rental_provider",
+      image: "assets/images/doctor_3.png",
+      distance: "0.8 km",
+      location: "Tebet, Jakarta Selatan",
+      availability: "3 kursi roda tersedia",
+      rating: 4.9,
+      reviews: 95,
+      reviewScore: 5,
+    ),
+    Partner(
+      name: "Panti Jompo Sejahtera",
+      partnerType: "nursing_home",
+      image: "assets/images/doctor_1.png",
+      distance: "1.2 km",
+      location: "Kemang, Jakarta Selatan",
+      availability: "4 caregiver tersedia",
+      rating: 4.8,
+      reviews: 120,
+      reviewScore: 5,
+    ),
+    Partner(
+      name: "RS Harapan Bunda",
+      partnerType: "hospital",
+      image: "assets/images/doctor_2.png",
+      distance: "2.5 km",
+      location: "Menteng, Jakarta Pusat",
+      availability: "2 ambulans tersedia",
+      rating: 4.6,
+      reviews: 203,
+      reviewScore: 5,
+    ),
   ];
 }

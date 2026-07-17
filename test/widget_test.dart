@@ -5,7 +5,6 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'dart:ui';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/widgets.dart';
@@ -21,9 +20,9 @@ void main() {
 
     await tester.pumpWidget(MyApp());
 
-    expect(find.text('Hi, Hosain'), findsOneWidget);
+    expect(find.text('Halo, Pengguna'), findsOneWidget);
     expect(find.text('Carego Wallet'), findsOneWidget);
-    expect(find.text('Top Up'), findsOneWidget);
+    expect(find.text('Isi Saldo'), findsOneWidget);
 
     await tester.pumpWidget(const SizedBox.shrink());
   });

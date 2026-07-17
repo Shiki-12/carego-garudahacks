@@ -43,7 +43,7 @@ class DoctorAppBar extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Hi, Hosain",
+                    "Halo, Pengguna",
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
@@ -53,7 +53,7 @@ class DoctorAppBar extends StatelessWidget {
                   ),
                   SizedBox(height: getRelativeHeight(0.003)),
                   Text(
-                    "Find A Doctor & Specialist easily",
+                    "Temukan layanan kesehatan terbaik",
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(

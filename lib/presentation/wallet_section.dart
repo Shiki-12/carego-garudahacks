@@ -85,7 +85,7 @@ class WalletSection extends StatelessWidget {
                         SizedBox(width: getRelativeWidth(0.008)),
                         Expanded(
                           child: Text(
-                            "Secure Payment",
+                            "Pembayaran Aman",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: TextStyle(
@@ -136,7 +136,7 @@ class WalletSection extends StatelessWidget {
                       SizedBox(width: getRelativeWidth(0.01)),
                       Flexible(
                         child: Text(
-                          "Top Up",
+                          "Isi Saldo",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(

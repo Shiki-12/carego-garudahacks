@@ -1,0 +1,13 @@
+encore.gen.go
+encore.gen.cue
+/.encore
+/encore.gen
+
+# Node / TypeScript
+node_modules/
+tsconfig.tsbuildinfo
+
+# Local env / secrets
+.env
+.env.*
+*.local

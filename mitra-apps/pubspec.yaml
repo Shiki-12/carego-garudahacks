@@ -1,0 +1,46 @@
+name: mitra_app
+description: CAREGO Provider/Mitra Application.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.2.1
+  line_icons: ^2.0.3
+  font_awesome_flutter: ^11.0.0
+  flutter_rating_bar: ^4.0.1
+
+  # Lapisan klien produksi (doc 08 §2-4): HTTP + secure storage token.
+  http: ^1.2.0
+  flutter_secure_storage: ^9.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - asset_feature_banner/1.png
+    - asset_feature_banner/2.png
+    - asset_feature_banner/3.png
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Bold.ttf
+        - asset: assets/fonts/Nunito-Regular.ttf
+        - asset: assets/fonts/Nunito-Black.ttf
+        - asset: assets/fonts/Nunito-ExtraBold.ttf
+        - asset: assets/fonts/Nunito-SemiBold.ttf
+        - asset: assets/fonts/Nunito-Light.ttf
+        - asset: assets/fonts/Nunito-ExtraLight.ttf

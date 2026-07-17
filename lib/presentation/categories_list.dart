@@ -4,7 +4,9 @@ import 'package:doctor_app/data/data.dart';
 import '../constants.dart';
 import '../size_confige.dart';
 import 'ambulance_screen.dart';
+import 'caregiver_list_screen.dart';
 import 'coming_soon_page.dart';
+import 'rental_catalog_screen.dart';
 
 class CategoriesList extends StatelessWidget {
   const CategoriesList({
@@ -38,7 +40,11 @@ class CategoriesList extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () {
                     final Widget target;
-                    if (category.title == 'Ambulans') {
+                    if (category.title == 'Caregiver') {
+                      target = const CaregiverListScreen();
+                    } else if (category.title == 'Sewa Alkes') {
+                      target = const RentalCatalogScreen();
+                    } else if (category.title == 'Ambulans') {
                       target = const AmbulanceScreen();
                     } else {
                       target = ComingSoonPage(title: category.title);

@@ -96,7 +96,7 @@ class _PreferenceTile extends StatelessWidget {
       child: SwitchListTile(
         value: value,
         onChanged: onChanged,
-        activeColor: const Color(0xff0D9488),
+        activeThumbColor: const Color(0xff0D9488),
         title: Text(
           title,
           style: const TextStyle(

@@ -5,7 +5,6 @@ import 'package:doctor_app/presentation/banner.dart';
 import 'package:doctor_app/presentation/bottom_navigation_bar.dart';
 import 'package:doctor_app/presentation/chat_screen.dart';
 import 'package:doctor_app/presentation/doctors_list.dart';
-import 'package:doctor_app/presentation/notifications_screen.dart';
 import 'package:doctor_app/presentation/orders_screen.dart';
 import 'package:doctor_app/presentation/wallet_section.dart';
 import 'package:doctor_app/size_confige.dart';

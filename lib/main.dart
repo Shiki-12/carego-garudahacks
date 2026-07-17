@@ -3,6 +3,8 @@ import 'package:doctor_app/constants.dart';
 import 'package:doctor_app/model.dart/app_version_model.dart';
 import 'package:doctor_app/presentation/doctor_app.dart';
 import 'package:doctor_app/size_confige.dart';
+import 'package:doctor_app/core/service_locator.dart';
+import 'package:doctor_app/data/data.dart';
 
 void main() {
   runApp(MyApp());
@@ -41,6 +43,7 @@ class _AppLaunchScreenState extends State<AppLaunchScreen> {
   @override
   void initState() {
     super.initState();
+    Services.I.init(); // Initialize API services
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _checkAppVersion();
     });
@@ -61,6 +64,31 @@ class _AppLaunchScreenState extends State<AppLaunchScreen> {
     if (_isNewerVersion(version.latestVersion, _currentVersion)) {
       _showUpdateDialog(version);
       return;
+    }
+
+    try {
+      final caregivers = await Services.I.caregiver.getCaregivers();
+      Data.caregiversList = caregivers;
+      
+      final equipments = await Services.I.rental.getEquipments();
+      Data.equipmentList = equipments;
+
+      // Note: Orders, Chat, Notifications, Wallet require auth token
+      if (await Services.I.tokens.isLoggedIn) {
+        final orders = await Services.I.order.getOrders();
+        Data.ordersList = orders;
+        
+        final conversations = await Services.I.chat.getConversations();
+        Data.conversationsList = conversations;
+
+        final notifications = await Services.I.notification.getNotifications();
+        Data.mockNotifications = notifications;
+
+        final transactions = await Services.I.wallet.getTransactions();
+        Data.mockTransactions = transactions;
+      }
+    } catch (e) {
+      print('Failed to load dynamic data: $e');
     }
 
     setState(() => _showHome = true);

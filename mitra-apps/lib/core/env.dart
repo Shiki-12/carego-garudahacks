@@ -1,18 +1,18 @@
 /// Konfigurasi environment (doc 08 §3).
 ///
-/// Base URL TIDAK boleh hardcode di kode. Jalankan dengan mis:
-///   flutter run --dart-define=API_BASE=https://staging.carego.example
-///               --dart-define=WS_BASE=wss://staging.carego.example
+/// Base URL default = Encore Cloud staging (backend live). Override ke lokal:
+///   flutter run --dart-define=API_BASE=http://10.0.2.2:4000
+///               --dart-define=WS_BASE=ws://10.0.2.2:4000
 ///
-/// Tiga environment: local (default), staging, production (doc 09).
+/// Tiga environment: local, staging (default), production (doc 09).
 class Env {
   static const apiBase = String.fromEnvironment(
     'API_BASE',
-    defaultValue: 'http://localhost:4000',
+    defaultValue: 'https://staging-garudahacks-wtk2.encr.app',
   );
 
   static const wsBase = String.fromEnvironment(
     'WS_BASE',
-    defaultValue: 'ws://localhost:4000',
+    defaultValue: 'wss://staging-garudahacks-wtk2.encr.app',
   );
 }

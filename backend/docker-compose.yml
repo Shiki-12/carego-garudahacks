@@ -26,7 +26,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - WAHA_API_KEY=waha_secure_key_123
+      - WAHA_API_KEY=ec8110ea9d1343e69c1191e13b22b81f
     restart: unless-stopped
 
 volumes:

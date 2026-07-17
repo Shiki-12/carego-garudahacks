@@ -64,6 +64,7 @@ export async function sendOtpWaha(phone: string, otp: string) {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
+                "X-Api-Key": "ec8110ea9d1343e69c1191e13b22b81f"
             },
             body: JSON.stringify({
                 chatId: `${formattedPhone}@c.us`,
